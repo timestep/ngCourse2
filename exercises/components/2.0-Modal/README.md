@@ -36,5 +36,3 @@ Complete the implementation of  _*app/app-component.ts*_ such that:
 ## Expected Results
 
 ![](modal.gif)
-
-

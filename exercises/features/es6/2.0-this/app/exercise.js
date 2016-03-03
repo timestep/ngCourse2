@@ -12,6 +12,6 @@ class MyDiv {
 }
 
 var example = new MyDiv('example');
-var write = example.write;
+var write = example.write.bind(example);
 
 write('This is Fixed');

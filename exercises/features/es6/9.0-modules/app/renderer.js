@@ -1,3 +1,5 @@
+import * as consoleRenderer from './console';
+import * as domRenderer from './dom';
 
 export function create(renderModule) {
   if (!renderModule) {

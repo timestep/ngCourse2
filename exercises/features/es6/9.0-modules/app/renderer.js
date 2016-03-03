@@ -1,5 +1,5 @@
 
-function create(renderModule) {
+export function create(renderModule) {
   if (!renderModule) {
     return domRenderer;
   }

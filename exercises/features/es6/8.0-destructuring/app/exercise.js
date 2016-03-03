@@ -8,7 +8,6 @@ const container = {
   life: 'Life'
 };
 
-let js = container.js;
-let life = container.life;
+let { js, life } = container;
 
 element.innerHTML = `${js} for ${life}`;

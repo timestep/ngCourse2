@@ -8,7 +8,7 @@ class MyDiv {
   }
 
   write() {
-    this.words.forEach(function (word) {
+    this.words.forEach( (word) => {
       this.element.innerHTML += word + ' ';
     });
   }

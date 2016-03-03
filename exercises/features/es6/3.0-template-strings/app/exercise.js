@@ -8,4 +8,4 @@ function write(text) {
 
 var age = 900;
 
-write('Yoda is ' + age + ' years old');
+write(`Yoda is ${age} years old`);

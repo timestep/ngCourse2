@@ -29,9 +29,36 @@ export default class ArtistSearch {
     private searchService: SearchService,
     private fb: FormBuilder
   ) {
+
+    let mapReshape(artists){
+      return artists.map(reShapeArtist);
+    }
+
+    let fromArtistItems(res){
+      return res.artists.items;
+    }
+
     this.searchField = new Control();
     this.searchForm = fb.group({ search: this.searchField });
 
-    // this.searchField.valueChanges
+    this.searchField.valueChanges
+      .debounceTime(400)
+      .flatMap(term => this.searchService.search(term))
+      .map(fromArtistItems)
+      .map(mapReshape)
+      .subscribe(artists => {
+        this.artists = artists
+      })
   }
+}
+
+
+/**
+ * Re-shape artist
+ */
+function reShapeArtist({ name, popularity, images }) {
+  const image = images.length > 0 ? images[0].url :
+        'https://placehold.it/128?text=N%2FA';
+
+  return { name, popularity, image };
 }

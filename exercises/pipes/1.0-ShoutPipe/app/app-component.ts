@@ -1,12 +1,12 @@
 import {Component} from 'angular2/core';
-// Import your Pipe
+import {ShoutPipe} from './shout-pipe';
 
 @Component({
   selector: 'ngc-app',
   template: `<div>
-  <p>{{ message | shout}}</p>
+    <p>{{ message | shout}}</p>
   </div>`,
-  pipes: []
+  pipes: [ShoutPipe]
 })
 export class App {
   message: string = 'Hello There';

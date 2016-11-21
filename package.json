@@ -11,7 +11,7 @@
   "devDependencies": {
     "gitbook-plugin-jsbin": "",
     "gitbook-plugin-versions": "^2.1.1",
-    "gitbook-cli": "^1.0.1"
+    "gitbook-cli": "^2.3.0"
   },
   "scripts": {
     "build": "gitbook build",
